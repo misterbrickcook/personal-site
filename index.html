@@ -1,0 +1,1748 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0A66C2">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='10' fill='%230A66C2'/><g fill='%23fff'><circle cx='12' cy='8' r='3'/><circle cx='12' cy='18' r='3'/><circle cx='12' cy='28' r='3'/><circle cx='12' cy='38' r='3'/><circle cx='12' cy='48' r='3'/><circle cx='12' cy='58' r='3'/><circle cx='22' cy='28' r='3'/><circle cx='32' cy='28' r='3'/><circle cx='42' cy='33' r='3'/><circle cx='42' cy='43' r='3'/><circle cx='42' cy='53' r='3'/><circle cx='32' cy='58' r='3'/><circle cx='22' cy='58' r='3'/></g></svg>">
+<link rel="apple-touch-icon" href="assets/barzik-studio-logo.png">
+<meta name="description" content="Alexander Barzik — Immobilienkaufmann bei der BGW Bielefeld, Wirtschaftsinformatik-Student (FHDW) und Gründer von BARZIK STUDIO. Fokus auf KI in der Wohnungswirtschaft.">
+<meta name="author" content="Alexander Barzik">
+<meta name="geo.region" content="DE-NW">
+<meta name="geo.placename" content="Bielefeld">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://alexanderbarzik.de/">
+<link rel="alternate" hreflang="de" href="https://alexanderbarzik.de/">
+<link rel="alternate" hreflang="en" href="https://alexanderbarzik.de/?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://alexanderbarzik.de/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Alexander Barzik – Immobilienkaufmann & Wirtschaftsinformatiker">
+<meta property="og:description" content="Immobilienkaufmann bei der BGW Bielefeld, Wirtschaftsinformatik-Student (FHDW) und Gründer von BARZIK STUDIO. Fokus auf KI in der Wohnungswirtschaft.">
+<meta property="og:url" content="https://alexanderbarzik.de/">
+<meta property="og:site_name" content="Alexander Barzik">
+<meta property="og:locale" content="de_DE">
+<meta property="profile:first_name" content="Alexander">
+<meta property="profile:last_name" content="Barzik">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Alexander Barzik – Immobilienkaufmann & Wirtschaftsinformatiker">
+<meta name="twitter:description" content="Immobilienkaufmann bei der BGW Bielefeld, Wirtschaftsinformatik-Student (FHDW) und Gründer von BARZIK STUDIO.">
+<title>Alexander Barzik</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================
+   RESET + TOKENS
+   ============================================ */
+*{box-sizing:border-box; -webkit-tap-highlight-color:transparent}
+html,body{margin:0; padding:0}
+body{
+  font-family:"Source Sans 3", system-ui, -apple-system, sans-serif;
+  background:#F4F2EE;
+  color:rgba(0,0,0,.9);
+  font-size:14px;
+  line-height:1.45;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+a{color:#0A66C2; text-decoration:none; font-weight:600}
+a:hover{text-decoration:underline}
+button{font-family:inherit; cursor:pointer; border:none; background:none; padding:0}
+img{display:block; max-width:100%}
+
+:root{
+  --blue:#0A66C2;
+  --blue-dark:#004182;
+  --blue-tint:#E7F0FA;
+  --bg:#F4F2EE;
+  --card:#FFFFFF;
+  --line:#E0DFDC;
+  --ink:rgba(0,0,0,.9);
+  --ink-2:rgba(0,0,0,.75);
+  --ink-3:rgba(0,0,0,.6);
+  --green-open:#01754F;
+  --gold:#915907;
+}
+
+/* ============================================
+   DESKTOP TOP NAV (≥720px)
+   ============================================ */
+.topbar{
+  background:#fff;
+  border-bottom:1px solid var(--line);
+  height:52px;
+  display:flex;
+  align-items:center;
+  padding:0 24px;
+  position:sticky; top:0; z-index:30;
+}
+.brand{
+  width:36px; height:36px; border-radius:6px;
+  background:var(--blue); color:#fff;
+  display:flex; align-items:center; justify-content:center;
+  margin-right:8px;
+}
+.brand svg{display:block}
+.search-desktop{
+  background:#EDF3F8; height:34px; border-radius:4px;
+  display:flex; align-items:center; padding:0 8px; gap:6px;
+  width:280px;
+  position:relative;
+}
+.search-desktop input{
+  border:none; outline:none; background:transparent;
+  flex:1; font-size:14px; font-family:inherit; color:var(--ink);
+}
+.search-desktop svg{color:var(--ink-2)}
+.nav-icons{
+  margin-left:auto;
+  display:flex; align-items:stretch; height:52px;
+}
+.nav-item{
+  display:flex; flex-direction:column; align-items:center; justify-content:flex-start;
+  padding:6px 18px 0;
+  color:var(--ink-3);
+  font-size:12px; font-weight:400;
+  position:relative;
+  border-bottom:2px solid transparent;
+  text-decoration:none;
+}
+.nav-item:hover{color:var(--ink)}
+.nav-item.active{color:var(--ink); border-bottom-color:var(--ink)}
+.nav-item .ic{display:block; margin-bottom:1px}
+.nav-badge{
+  position:absolute; top:2px; right:8px; background:#CB112D; color:#fff;
+  font-size:10px; font-weight:700; padding:0 5px; border-radius:8px; min-width:16px; text-align:center;
+  border:1px solid #fff;
+}
+.nav-divider{width:1px; background:var(--line); margin:8px 4px}
+.nav-me{
+  display:flex; flex-direction:column; align-items:center;
+  color:var(--ink-3); font-size:12px;
+  padding:6px 12px;
+}
+.me-avatar{
+  width:24px; height:24px; border-radius:50%;
+  background-size:cover; background-position:center;
+  border:1px solid var(--line);
+}
+
+/* ============================================
+   MOBILE TOP CHROME (<720px)
+   ============================================ */
+.mobile-status{
+  display:none;
+  height:env(safe-area-inset-top, 0px);
+  background:#fff;
+}
+.mobile-header{
+  display:none;
+  background:#fff;
+  border-bottom:1px solid var(--line);
+  height:52px;
+  align-items:center;
+  padding:0 8px;
+  position:sticky; top:0; z-index:30;
+  gap:4px;
+}
+.mh-icon{
+  width:40px; height:40px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  color:var(--ink); flex-shrink:0;
+}
+.mh-icon:active{background:rgba(0,0,0,.08)}
+.mh-search{
+  flex:1;
+  background:#EDF3F8;
+  height:36px; border-radius:4px;
+  display:flex; align-items:center; padding:0 12px; gap:8px;
+  font-size:14px; color:var(--ink-3);
+}
+.mh-search svg{color:var(--ink-2)}
+.mh-condensed{
+  display:none;
+  align-items:center; gap:10px;
+  flex:1;
+  opacity:0; transform:translateY(8px);
+  transition:.2s;
+}
+.mh-condensed.visible{opacity:1; transform:translateY(0)}
+.mh-condensed .av{
+  width:28px; height:28px; border-radius:50%;
+  background-image:url('assets/alexander-barzik-square.jpg');
+  background-size:cover; background-position:center;
+}
+.mh-condensed .nm{font-weight:700; font-size:15px; color:var(--ink); flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.mh-condensed .cn{
+  background:var(--blue); color:#fff;
+  height:30px; padding:0 14px; border-radius:15px;
+  font-size:13px; font-weight:600;
+  display:flex; align-items:center; gap:4px;
+}
+
+/* ============================================
+   PAGE LAYOUT
+   ============================================ */
+.page{
+  max-width:1128px;
+  margin:0 auto;
+  padding:24px 16px;
+  display:grid;
+  grid-template-columns:1fr 312px;
+  gap:24px;
+}
+
+/* ============================================
+   GENERIC CARDS
+   ============================================ */
+.card{
+  background:var(--card);
+  border-radius:8px;
+  border:1px solid var(--line);
+  margin-bottom:8px;
+  overflow:hidden;
+}
+.card-head{
+  padding:20px 24px 0;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.card-head h2{
+  margin:0; font-size:20px; font-weight:600; color:var(--ink);
+}
+.card-head .actions{display:flex; gap:4px}
+.icon-btn{
+  width:32px; height:32px; border-radius:50%;
+  background:transparent; color:var(--ink-2);
+  display:inline-flex; align-items:center; justify-content:center;
+}
+.icon-btn:hover{background:rgba(0,0,0,.08)}
+.card-body{padding:8px 24px 24px}
+.card-foot{
+  padding:12px 24px;
+  border-top:1px solid var(--line);
+  font-size:14px; font-weight:600; color:var(--ink-3);
+  text-align:center;
+  display:flex; align-items:center; justify-content:center; gap:6px;
+}
+.card-foot:hover{background:rgba(0,0,0,.04); color:var(--ink)}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero{
+  background:var(--card);
+  border-radius:8px;
+  border:1px solid var(--line);
+  margin-bottom:8px;
+  overflow:hidden;
+  position:relative;
+}
+.hero-cover{
+  height:201px;
+  background:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><g fill='rgba(255,255,255,0.16)'><circle cx='12' cy='8' r='3'/><circle cx='12' cy='18' r='3'/><circle cx='12' cy='28' r='3'/><circle cx='12' cy='38' r='3'/><circle cx='12' cy='48' r='3'/><circle cx='12' cy='58' r='3'/><circle cx='22' cy='28' r='3'/><circle cx='32' cy='28' r='3'/><circle cx='42' cy='33' r='3'/><circle cx='42' cy='43' r='3'/><circle cx='42' cy='53' r='3'/><circle cx='32' cy='58' r='3'/><circle cx='22' cy='58' r='3'/></g></svg>") right 32px center / auto 85% no-repeat,
+    radial-gradient(ellipse at 30% 70%, #0A66C2 0%, #004182 40%, #001D3D 100%);
+  position:relative;
+  overflow:hidden;
+}
+.hero-cover::before{
+  content:""; position:absolute; inset:0;
+  background:
+    radial-gradient(circle at 78% 28%, rgba(196,74,43,0.8) 4px, transparent 5px),
+    radial-gradient(circle at 80% 30%, rgba(255,255,255,.10), transparent 30%),
+    linear-gradient(110deg, transparent 40%, rgba(255,255,255,.04) 50%, transparent 60%);
+}
+.hero-cover::after{
+  content:"";
+  position:absolute; left:-60px; top:-60px;
+  width:220px; height:220px;
+  background:conic-gradient(from 220deg at 50% 50%, rgba(255,255,255,0.05) 0deg, transparent 90deg, rgba(255,255,255,0.08) 180deg, transparent 270deg);
+  border-radius:50%; filter:blur(2px);
+}
+.cover-edit{
+  position:absolute; top:16px; right:16px;
+  width:32px; height:32px; border-radius:50%;
+  background:rgba(255,255,255,.95);
+  display:flex; align-items:center; justify-content:center;
+  color:var(--ink); cursor:pointer;
+}
+.hero-body{padding:0 24px 16px; position:relative}
+.hero-avatar{
+  width:152px; height:152px; border-radius:50%;
+  background-image:url('assets/alexander-barzik-square.jpg');
+  background-size:cover; background-position:center;
+  border:4px solid #fff;
+  margin-top:-76px;
+  box-shadow:0 0 0 1px rgba(0,0,0,.04);
+  position:relative;
+}
+/* Removed: .open-status (now inline in role) */
+.hero h1{
+  margin:12px 0 2px;
+  font-size:24px; font-weight:600; letter-spacing:-0.2px;
+  display:flex; align-items:center; gap:8px;
+}
+.pronouns{font-size:14px; font-weight:400; color:var(--ink-3)}
+.hero .role{
+  font-size:16px; color:var(--ink); font-weight:400;
+  margin-top:2px; line-height:1.4;
+}
+.hero .meta{
+  font-size:14px; color:var(--ink-3); margin-top:8px;
+  display:flex; align-items:center; gap:6px; flex-wrap:wrap;
+}
+.hero .meta a{color:var(--blue); font-weight:600}
+.hero .meta .dot{color:var(--ink-3)}
+.hero-companies{
+  display:flex; gap:16px; margin-top:14px;
+  font-size:14px; font-weight:600;
+  color:var(--ink); flex-wrap:wrap;
+}
+.hc{display:flex; align-items:center; gap:6px}
+.hc-logo{
+  width:24px; height:24px; border-radius:4px;
+  background:#fff;
+  color:#fff; font-weight:700; font-size:10px;
+  display:flex; align-items:center; justify-content:center;
+  overflow:hidden;
+  border:1px solid var(--line);
+}
+.hc-logo img{width:100%; height:100%; object-fit:contain; padding:2px}
+.hc-logo.is-circle{background:transparent; border:none}
+.hc-logo.is-circle img{padding:0; border-radius:50%}
+.hero-actions{
+  margin-top:16px;
+  display:flex; gap:8px; flex-wrap:wrap;
+}
+.btn{
+  height:32px; padding:0 16px; border-radius:16px;
+  font-size:14px; font-weight:600; font-family:inherit;
+  display:inline-flex; align-items:center; gap:6px;
+  cursor:pointer; transition:.15s;
+  border:1px solid transparent;
+}
+.btn-primary{background:var(--blue); color:#fff}
+.btn-primary:hover{background:var(--blue-dark)}
+.btn-ghost{
+  background:transparent;
+  border-color:rgba(0,0,0,.6); color:rgba(0,0,0,.75);
+}
+.btn-ghost:hover{background:rgba(0,0,0,.06); border-color:rgba(0,0,0,.9); color:var(--ink)}
+.btn-outline-blue{
+  background:transparent; color:var(--blue);
+  border-color:var(--blue);
+}
+.btn-outline-blue:hover{background:rgba(10,102,194,.08)}
+
+/* ============================================
+   ANALYTICS BAR (private/me view feel)
+   ============================================ */
+.analytics{
+  display:grid; grid-template-columns:1fr 1fr 1fr;
+  padding:14px 24px;
+  border-top:1px solid var(--line);
+  gap:12px;
+}
+.an-cell{
+  display:flex; align-items:flex-start; gap:10px;
+}
+.an-cell .ic{
+  width:20px; height:20px; color:var(--ink-3); flex-shrink:0; margin-top:2px;
+}
+.an-cell .lbl{
+  font-size:14px; font-weight:600; color:var(--ink); line-height:1.25;
+}
+.an-cell .sub{
+  font-size:13px; color:var(--ink-3); line-height:1.25;
+}
+
+/* ============================================
+   ABOUT / EXPERIENCE / EDUCATION
+   ============================================ */
+.about-text{font-size:14px; line-height:1.55; color:var(--ink)}
+.about-text p{margin:0 0 12px}
+.about-text p:last-child{margin-bottom:0}
+.show-more{
+  background:transparent; color:var(--ink-3); font-weight:600; font-size:14px;
+  margin-top:4px;
+}
+.show-more:hover{color:var(--ink); text-decoration:underline}
+
+.timeline{list-style:none; margin:0; padding:0}
+.timeline > li{
+  display:flex; gap:16px; padding:16px 0;
+  border-top:1px solid var(--line);
+}
+.timeline > li:first-child{border-top:none; padding-top:8px}
+.tl-logo{
+  width:48px; height:48px; border-radius:6px;
+  background:#fff;
+  color:#fff; font-weight:800; font-size:15px;
+  display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  letter-spacing:-0.5px;
+  overflow:hidden;
+  border:1px solid var(--line);
+}
+.tl-logo img{width:100%; height:100%; object-fit:contain; padding:4px}
+.tl-logo.fallback{background:linear-gradient(135deg, #0A66C2, #004182); border:none; padding:0}
+.tl-logo.fallback.uni{background:linear-gradient(135deg, #5C2D8C, #3A1B5B)}
+.tl-logo.fallback.school{background:linear-gradient(135deg, #8B7355, #5C4A33)}
+.tl-content{flex:1; min-width:0}
+.tl-title{font-weight:600; font-size:16px; color:var(--ink); margin:0; line-height:1.3}
+.tl-org{font-size:14px; color:var(--ink); margin:2px 0 1px}
+.tl-meta{font-size:13px; color:var(--ink-3)}
+.tl-meta span + span::before{content:" · "}
+.tl-loc{font-size:13px; color:var(--ink-3)}
+.tl-desc{font-size:14px; color:var(--ink); margin-top:8px; line-height:1.5}
+.tl-skills{
+  font-size:13px; color:var(--ink-2); margin-top:8px;
+  display:flex; align-items:center; gap:6px; flex-wrap:wrap;
+}
+.tl-skills .ic-sk{
+  width:16px; height:16px; background:linear-gradient(135deg,#0A66C2,#004182);
+  border-radius:3px; flex-shrink:0;
+  display:inline-flex; align-items:center; justify-content:center;
+  color:#fff;
+}
+.sub-roles{
+  list-style:none; margin:8px 0 0; padding:0 0 0 20px;
+  border-left:2px solid var(--line);
+}
+.sub-roles li{padding:8px 0}
+.sub-role-title{font-weight:600; font-size:14px; margin:0}
+.sub-role-meta{font-size:13px; color:var(--ink-3); margin-top:2px}
+
+/* ============================================
+   SKILLS
+   ============================================ */
+.skill-row{
+  display:flex; align-items:flex-start; gap:12px;
+  padding:12px 0; border-top:1px solid var(--line);
+}
+.skill-row:first-child{border-top:none; padding-top:4px}
+.skill-icon{
+  width:24px; height:24px; border-radius:4px;
+  background:linear-gradient(135deg,#0A66C2,#004182);
+  color:#fff; display:flex; align-items:center; justify-content:center;
+  flex-shrink:0;
+}
+.skill-name{font-weight:600; font-size:16px; color:var(--ink); margin:0}
+.skill-meta{font-size:13px; color:var(--ink-3); margin-top:4px; display:flex; align-items:center; gap:4px; flex-wrap:wrap}
+.endorser-stack{display:flex; margin-right:4px}
+.endorser-stack > span{
+  width:18px; height:18px; border-radius:50%;
+  background:#ccc; border:1.5px solid #fff;
+  margin-left:-4px;
+  font-size:9px; color:#fff; font-weight:700;
+  display:inline-flex; align-items:center; justify-content:center;
+}
+.endorser-stack > span:first-child{margin-left:0}
+
+/* ============================================
+   LANGUAGES
+   ============================================ */
+.lang-item{padding:12px 0; border-top:1px solid var(--line)}
+.lang-item:first-child{border-top:none; padding-top:4px}
+.lang-name{font-weight:600; font-size:16px; margin:0}
+.lang-level{font-size:14px; color:var(--ink-3); margin-top:2px}
+
+/* ============================================
+   INTERESTS
+   ============================================ */
+.interest-tabs{
+  display:flex; gap:24px; border-bottom:1px solid var(--line);
+  padding:0 24px;
+  margin-bottom:8px;
+  overflow-x:auto; scrollbar-width:none;
+}
+.interest-tabs::-webkit-scrollbar{display:none}
+.it{
+  padding:12px 0;
+  font-size:14px; font-weight:600; color:var(--ink-3);
+  border-bottom:2px solid transparent;
+  margin-bottom:-1px;
+  cursor:pointer; flex-shrink:0;
+}
+.it.active{color:var(--blue); border-bottom-color:var(--blue)}
+.companies-grid{
+  display:grid; grid-template-columns:1fr 1fr; gap:0;
+  padding:0 24px 16px;
+}
+.company-item{
+  display:flex; gap:12px; padding:12px 0;
+  border-top:1px solid var(--line);
+}
+.company-item:nth-child(-n+2){border-top:none}
+.company-item:nth-child(odd){border-right:1px solid var(--line); padding-right:16px}
+.company-item:nth-child(even){padding-left:16px}
+.ci-logo{width:48px; height:48px; border-radius:6px; flex-shrink:0; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:13px; overflow:hidden; border:1px solid var(--line); background:#fff}
+.ci-logo img{width:100%; height:100%; object-fit:contain; padding:4px}
+.ci-name{font-weight:600; font-size:14px; margin:0; line-height:1.3}
+.ci-followers{font-size:13px; color:var(--ink-3); margin-top:2px}
+.ci-follow{
+  font-size:13px; font-weight:600; color:var(--ink-2);
+  background:transparent; border:1px solid var(--ink-2);
+  border-radius:14px; padding:3px 12px;
+  margin-top:6px;
+  display:inline-flex; align-items:center; gap:4px;
+}
+
+/* ============================================
+   RIGHT SIDEBAR
+   ============================================ */
+.sidecard{
+  background:var(--card); border-radius:8px;
+  border:1px solid var(--line);
+  margin-bottom:8px;
+  overflow:hidden;
+}
+.sidecard-head{
+  padding:14px 16px 4px;
+  display:flex; align-items:flex-start; justify-content:space-between;
+}
+.sidecard-head h3{margin:0; font-size:16px; font-weight:600}
+.sidecard-head .sub{font-size:13px; color:var(--ink-3); margin-top:2px}
+.sidecard-body{padding:0 16px 12px}
+.sidecard-foot{
+  padding:12px 16px;
+  border-top:1px solid var(--line);
+  font-size:14px; font-weight:600; color:var(--ink-3);
+  text-align:center; cursor:pointer;
+}
+.sidecard-foot:hover{background:rgba(0,0,0,.04)}
+
+/* Studio Card */
+.studio-card{
+  display:block;
+  background:#1a1815;
+  color:#fff;
+  border-radius:8px;
+  border:1px solid #1a1815;
+  margin-bottom:8px;
+  padding:16px;
+  text-decoration:none;
+  position:relative;
+  overflow:hidden;
+  transition:.2s;
+}
+.studio-card::before{
+  content:"";
+  position:absolute; inset:0;
+  background:radial-gradient(ellipse at 100% 0%, rgba(255,255,255,.06), transparent 60%);
+  pointer-events:none;
+}
+.studio-card:hover{transform:translateY(-1px); text-decoration:none}
+.studio-card:hover .studio-arrow{transform:translate(2px,-2px)}
+.studio-head{
+  display:flex; align-items:center; gap:10px;
+  position:relative;
+}
+.studio-logo{
+  width:38px; height:38px;
+  flex-shrink:0; overflow:hidden;
+  border-radius:50%;
+  box-shadow:0 0 0 2px rgba(255,255,255,.9);
+}
+.studio-logo img{width:100%; height:100%; object-fit:cover; display:block}
+.studio-brand{flex:1; min-width:0}
+.studio-name{
+  font-size:14px; font-weight:700;
+  letter-spacing:.6px;
+  color:#fff;
+}
+.studio-tag{
+  font-size:12px; color:rgba(255,255,255,.55);
+  margin-top:1px;
+}
+.studio-arrow{
+  width:28px; height:28px;
+  display:flex; align-items:center; justify-content:center;
+  color:rgba(255,255,255,.6);
+  transition:transform .2s;
+  flex-shrink:0;
+}
+.studio-body{
+  font-size:13px; line-height:1.5;
+  color:rgba(255,255,255,.75);
+  margin-top:12px;
+  position:relative;
+}
+.studio-tags{
+  display:flex; flex-wrap:wrap; gap:6px;
+  margin-top:12px;
+  position:relative;
+}
+.studio-tags > span{
+  font-size:11px; font-weight:600;
+  color:rgba(255,255,255,.75);
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.1);
+  padding:3px 8px;
+  border-radius:10px;
+}
+
+/* Role line — accent for "immer offen für Austausch" */
+.role-sub{margin-top:4px}
+.role-open{
+  display:inline-flex; align-items:center; gap:6px;
+  color:var(--green-open);
+  font-weight:600;
+  font-size:14px;
+}
+.role-open::before{
+  content:""; width:7px; height:7px;
+  border-radius:50%; background:var(--green-open);
+  display:inline-block;
+  box-shadow:0 0 0 3px rgba(1,117,79,.15);
+}
+
+.focus-list{list-style:none; margin:0; padding:0}
+.focus-item{display:flex; align-items:flex-start; gap:12px; padding:10px 0; border-top:1px solid var(--line); opacity:0; transform:translateY(8px); transition:opacity .4s, transform .4s, background .15s}
+.focus-item.visible{opacity:1; transform:translateY(0)}
+.focus-item:first-child{border-top:none; padding-top:4px}
+.focus-item:nth-child(2){transition-delay:.1s}
+.focus-item:nth-child(3){transition-delay:.2s}
+.focus-icon{
+  width:40px; height:40px; border-radius:10px; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+  transition:transform .25s cubic-bezier(.3,1.5,.5,1), box-shadow .25s;
+}
+.focus-item:hover .focus-icon{transform:scale(1.1); box-shadow:0 4px 12px rgba(0,0,0,.15)}
+.focus-info{flex:1; min-width:0}
+.focus-title{font-size:14px; font-weight:600; color:var(--ink); margin:0; display:flex; align-items:center; gap:8px}
+.focus-badge{
+  font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.5px;
+  padding:2px 7px; border-radius:6px;
+  background:rgba(1,117,79,.1); color:var(--green-open);
+}
+.focus-desc{font-size:13px; color:var(--ink-3); margin-top:3px; line-height:1.4}
+
+.promo{
+  background:var(--card); border-radius:8px;
+  border:1px solid var(--line); padding:16px;
+  text-align:center;
+  margin-bottom:8px;
+}
+.promo .label{font-size:12px; color:var(--ink-3); margin-bottom:8px}
+.promo .promo-title{font-size:14px; font-weight:600; margin:8px 0 12px}
+
+.footer-links{
+  padding:0 16px;
+  font-size:12px; color:var(--ink-3);
+  display:flex; gap:8px 12px; flex-wrap:wrap;
+  justify-content:center;
+  margin-top:12px;
+}
+.footer-links a{color:var(--ink-3); font-weight:400}
+.footer-meta{
+  text-align:center;
+  font-size:11px; color:var(--ink-3);
+  margin-top:8px; padding:0 16px 16px;
+  line-height:1.4;
+}
+
+/* ============================================
+   MOBILE BOTTOM NAV (<720px)
+   ============================================ */
+.bottom-nav{
+  display:none;
+  position:fixed; left:0; right:0; bottom:0;
+  background:#fff;
+  border-top:1px solid var(--line);
+  z-index:40;
+  padding-bottom:env(safe-area-inset-bottom, 0px);
+}
+.bn-row{
+  display:flex; align-items:stretch; height:54px;
+}
+.bn-item{
+  flex:1;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  color:var(--ink-3);
+  font-size:10.5px; font-weight:500;
+  gap:2px;
+  position:relative;
+  text-decoration:none;
+  padding-top:4px;
+  border-top:2px solid transparent;
+}
+.bn-item:active{color:var(--ink)}
+.bn-item.active{color:var(--ink); border-top-color:var(--ink)}
+.bn-badge{
+  position:absolute; top:4px; right:18%;
+  background:#CB112D; color:#fff;
+  font-size:10px; font-weight:700; padding:0 4px;
+  border-radius:8px; min-width:14px; height:14px;
+  display:flex; align-items:center; justify-content:center;
+  border:1.5px solid #fff;
+}
+.bn-me{
+  position:relative;
+}
+.bn-me .av{
+  width:24px; height:24px; border-radius:50%;
+  background-image:url('assets/alexander-barzik-square.jpg');
+  background-size:cover; background-position:center;
+  border:2px solid var(--ink);
+}
+.bn-item.bn-me.active .av{border-color:var(--ink)}
+.bn-item:not(.active).bn-me .av{border-color:transparent}
+
+/* ============================================
+   RESPONSIVE — MOBILE OVERRIDES
+   ============================================ */
+@media (max-width: 720px){
+  body{background:#F4F2EE; padding-bottom:74px}
+
+  /* Hide desktop topbar, show mobile chrome */
+  .topbar{display:none}
+  .mobile-status{display:block}
+  .mobile-header{display:flex}
+  .bottom-nav{display:block}
+
+  /* Layout flattens */
+  .page{
+    grid-template-columns:1fr;
+    padding:8px 0 0;
+    gap:8px;
+    max-width:none;
+  }
+
+  /* Cards become edge-to-edge */
+  .card, .hero, .sidecard, .promo, .studio-card{
+    border-radius:0;
+    border-left:none; border-right:none;
+    margin-bottom:8px;
+  }
+
+  /* Hero adjusts */
+  .hero-cover{height:96px}
+  .hero-body{padding:0 16px 16px}
+  .hero-avatar{
+    width:96px; height:96px;
+    margin-top:-48px;
+    border-width:4px;
+  }
+  .open-status, .role-open{font-size:13px}
+  .hero h1{font-size:20px; flex-wrap:wrap; gap:6px}
+  .hero .role{font-size:14px; margin-top:4px}
+  .hero .meta{font-size:13px}
+  .hero-companies{font-size:13px; gap:12px; margin-top:12px}
+  .hero-actions{gap:6px}
+  .hero-actions .btn{height:34px; padding:0 14px; font-size:13px; flex:1; justify-content:center}
+  .hero-actions .btn-ghost:last-child{flex:0; padding:0; width:34px; border-radius:50%}
+  .hero-actions .btn-ghost:last-child::before{
+    content:"⋯"; font-size:18px; line-height:1;
+  }
+  .hero-actions .btn-ghost:last-child span{display:none}
+
+  /* Card heads tighter */
+  .card-head{padding:16px 16px 0}
+  .card-head h2{font-size:18px}
+  .card-body{padding:8px 16px 20px}
+  .card-foot{padding:14px 16px}
+
+  /* Analytics 1-col stack */
+  .analytics{
+    grid-template-columns:1fr;
+    padding:12px 16px;
+    gap:10px;
+  }
+
+  /* Companies grid → 1 col */
+  .companies-grid{grid-template-columns:1fr; padding:0 16px 12px}
+  .company-item:nth-child(odd),
+  .company-item:nth-child(even){
+    border-right:none; padding-left:0; padding-right:0;
+  }
+  .company-item:nth-child(-n+2){border-top:1px solid var(--line)}
+  .company-item:first-child{border-top:none}
+  .interest-tabs{padding:0 16px}
+
+  /* Sidecard heads */
+  .sidecard-head, .sidecard-body{padding-left:16px; padding-right:16px}
+  .sidecard-head h3{font-size:16px}
+
+  /* Sub-roles indent */
+  .sub-roles{padding-left:14px}
+
+  /* Footer */
+  .footer-links{padding:16px; justify-content:flex-start}
+  .footer-meta{text-align:left}
+}
+
+/* ============================================
+   MOBILE — SCROLLED STATE
+   ============================================ */
+@media (max-width: 720px){
+  body.scrolled .mh-default{display:none}
+  body.scrolled .mh-condensed{display:flex; visibility:visible}
+  .mh-condensed{visibility:hidden}
+}
+@media (min-width: 721px){
+  .mh-condensed{display:none !important}
+}
+
+/* Hide cover edit on mobile */
+@media (max-width: 720px){
+  .cover-edit{display:none}
+}
+
+/* ============================================
+   PRINT
+   ============================================ */
+@media print{
+  .topbar, .mobile-header, .mobile-status, .bottom-nav, .promo, .hero-actions, .card-foot, .icon-btn, .cover-edit, #ask-panel, #terminal-overlay{display:none !important}
+  body{background:#fff}
+  .card, .hero, .sidecard{border:1px solid #ddd; box-shadow:none; page-break-inside:avoid}
+  .page{grid-template-columns:1fr; padding:0}
+}
+
+/* ============================================
+   EASTER EGGS
+   ============================================ */
+
+/* Ask Alexander chat panel */
+#ask-panel{
+  position:fixed;
+  bottom:24px; right:24px;
+  width:380px; max-width:calc(100vw - 32px);
+  height:520px; max-height:calc(100vh - 48px);
+  background:#fff;
+  border-radius:16px;
+  box-shadow:0 20px 60px rgba(0,0,0,.25), 0 0 0 1px var(--line);
+  display:flex; flex-direction:column;
+  z-index:100;
+  transform:translateY(20px) scale(.94);
+  opacity:0; pointer-events:none;
+  transition:transform .28s cubic-bezier(.2,.9,.3,1.2), opacity .2s;
+  overflow:hidden;
+}
+#ask-panel.open{transform:translateY(0) scale(1); opacity:1; pointer-events:auto}
+.ap-head{
+  padding:14px 16px;
+  border-bottom:1px solid var(--line);
+  display:flex; align-items:center; justify-content:space-between;
+  gap:8px;
+  background:linear-gradient(180deg, #fff, #fafafa);
+}
+.ap-title{display:flex; align-items:center; gap:10px; flex:1; min-width:0}
+.ap-av{
+  width:36px; height:36px; border-radius:50%;
+  background-image:url('assets/alexander-barzik-square.jpg');
+  background-size:cover; background-position:center;
+  flex-shrink:0;
+  position:relative;
+}
+.ap-av::after{
+  content:""; position:absolute; bottom:0; right:0;
+  width:11px; height:11px; border-radius:50%;
+  background:var(--green-open); border:2px solid #fff;
+}
+.ap-id strong{display:block; font-size:14px; font-weight:700; color:var(--ink)}
+.ap-id span{font-size:11px; color:var(--ink-3); line-height:1.2}
+.ap-close{
+  width:32px; height:32px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  color:var(--ink-3); flex-shrink:0;
+}
+.ap-close:hover{background:rgba(0,0,0,.08); color:var(--ink)}
+.ap-body{
+  flex:1; overflow-y:auto;
+  padding:16px;
+  display:flex; flex-direction:column; gap:10px;
+  font-size:14px; line-height:1.45;
+}
+.ap-msg{
+  max-width:82%;
+  padding:10px 14px;
+  border-radius:16px;
+  word-wrap:break-word;
+}
+.ap-bot{
+  background:#F4F2EE; color:var(--ink);
+  align-self:flex-start;
+  border-bottom-left-radius:4px;
+}
+.ap-user{
+  background:var(--blue); color:#fff;
+  align-self:flex-end;
+  border-bottom-right-radius:4px;
+}
+.ap-suggest{
+  display:flex; flex-wrap:wrap; gap:6px;
+  margin-top:4px;
+}
+.ap-chip{
+  font-size:12px; font-weight:600;
+  color:var(--blue);
+  background:var(--blue-tint);
+  border:1px solid #C5DBF0;
+  padding:6px 12px; border-radius:14px;
+  cursor:pointer; font-family:inherit;
+  transition:.15s;
+}
+.ap-chip:hover{background:#D7E7F5}
+.ap-thinking{display:flex; gap:5px; padding:14px 16px; align-items:center}
+.ap-thinking span{
+  width:7px; height:7px; border-radius:50%; background:rgba(0,0,0,.35);
+  animation:thinking 1.3s infinite both;
+}
+.ap-thinking span:nth-child(2){animation-delay:.15s}
+.ap-thinking span:nth-child(3){animation-delay:.3s}
+@keyframes thinking{
+  0%, 70%, 100%{opacity:.3; transform:translateY(0)}
+  35%{opacity:1; transform:translateY(-3px)}
+}
+.ap-form{
+  padding:12px;
+  border-top:1px solid var(--line);
+  display:flex; gap:8px;
+  background:#fff;
+}
+.ap-form input{
+  flex:1; border:1px solid var(--line); border-radius:18px;
+  padding:0 14px; height:36px; font-size:14px; font-family:inherit;
+  outline:none; color:var(--ink);
+  background:#F4F2EE;
+}
+.ap-form input:focus{border-color:var(--blue); background:#fff}
+.ap-form button[type="submit"]{
+  width:36px; height:36px; border-radius:50%;
+  background:var(--blue); color:#fff;
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0;
+}
+.ap-form button[type="submit"]:hover{background:var(--blue-dark)}
+
+/* Avatar cursor hint */
+.hero-avatar{cursor:pointer; transition:transform .2s}
+.hero-avatar:hover{transform:scale(1.02)}
+
+/* Terminal overlay */
+#terminal-overlay{
+  position:fixed; inset:0;
+  background:rgba(0,0,0,.65);
+  display:none; align-items:center; justify-content:center;
+  z-index:200;
+  backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+  padding:24px;
+}
+#terminal-overlay.open{display:flex; animation:fadeIn .2s}
+@keyframes fadeIn{from{opacity:0} to{opacity:1}}
+.term-window{
+  width:min(700px, 100%); height:min(480px, 80vh);
+  background:#0E1517;
+  border-radius:10px;
+  box-shadow:0 30px 60px rgba(0,0,0,.5), 0 0 0 1px rgba(255,255,255,.06);
+  display:flex; flex-direction:column;
+  font-family:"SF Mono", "JetBrains Mono", "Menlo", "Consolas", monospace;
+  overflow:hidden;
+  animation:termOpen .3s cubic-bezier(.2,1.4,.4,1) both;
+}
+@keyframes termOpen{
+  from{transform:scale(.94); opacity:0}
+  to{transform:scale(1); opacity:1}
+}
+.term-bar{
+  background:#1A1F23; padding:10px 12px;
+  display:flex; align-items:center; gap:8px;
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.term-dot{
+  width:12px; height:12px; border-radius:50%;
+  border:none; padding:0; flex-shrink:0;
+  cursor:pointer;
+}
+.term-close{background:#FC615D}
+.dot-min{background:#FDBC40}
+.dot-max{background:#34C84A}
+.term-title{
+  flex:1; text-align:center;
+  font-size:12px; color:rgba(255,255,255,.55);
+  font-family:inherit; letter-spacing:.3px;
+}
+.term-body{
+  flex:1; overflow-y:auto;
+  padding:18px 22px;
+  font-size:13px; line-height:1.7;
+  color:#B9E0B0;
+}
+.term-row{display:flex; align-items:baseline; gap:6px}
+.term-prompt{color:#5DD5DC; flex-shrink:0; font-weight:600}
+.term-text{white-space:pre-wrap; word-break:break-word; flex:1}
+.term-cursor::after{
+  content:""; display:inline-block;
+  width:8px; height:14px; background:#B9E0B0;
+  margin-left:2px; vertical-align:-2px;
+  animation:blink 1s steps(2) infinite;
+}
+@keyframes blink{50%{opacity:0}}
+
+/* Search dropdown */
+#search-results{
+  position:absolute; top:100%; left:0; right:0;
+  background:#fff; border:1px solid var(--line);
+  border-top:none; border-radius:0 0 8px 8px;
+  box-shadow:0 8px 24px rgba(0,0,0,.12);
+  z-index:31; max-height:320px; overflow-y:auto;
+  display:none;
+}
+#search-results.open{display:block}
+.sr-item{
+  padding:10px 14px;
+  display:flex; align-items:center; gap:10px;
+  font-size:14px; color:var(--ink);
+  cursor:pointer; transition:background .1s;
+}
+.sr-item:hover{background:rgba(0,0,0,.04)}
+.sr-item .sr-icon{
+  width:28px; height:28px; border-radius:6px;
+  background:var(--blue-tint); color:var(--blue);
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0;
+}
+.sr-item .sr-text{flex:1; min-width:0}
+.sr-item .sr-title{font-weight:600; font-size:13px}
+.sr-item .sr-sub{font-size:12px; color:var(--ink-3); margin-top:1px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.sr-item.sr-ask{border-top:1px solid var(--line); color:var(--blue); font-weight:600}
+.sr-item.sr-ask .sr-icon{background:var(--blue); color:#fff}
+.sr-empty{padding:14px; font-size:13px; color:var(--ink-3); text-align:center}
+
+/* Brand logo hover */
+/* Language toggle */
+.lang-toggle{
+  font-size:11px; font-weight:600; color:inherit;
+  border:none; border-radius:0; background:transparent;
+  padding:0; cursor:pointer; line-height:1;
+  font-family:inherit; flex-shrink:0;
+}
+.nav-lang{border-bottom:2px solid transparent}
+.nav-lang:hover{color:var(--ink)}
+.nav-lang .lang-toggle{font-size:12px}
+.mh-default .lang-toggle{
+  font-size:10px; font-weight:700; color:var(--ink-3);
+  border:1.5px solid var(--line); border-radius:14px;
+  padding:2px 8px; letter-spacing:.3px;
+}
+html.i18n-loading{opacity:0}
+html.i18n-loading *{transition:none !important}
+
+.brand{cursor:pointer; transition:transform .2s}
+.brand:hover{transform:scale(1.05)}
+.brand svg circle{transition:transform .35s cubic-bezier(.3,1.7,.5,1)}
+
+/* Mobile adjustments for easter eggs */
+@media (max-width: 720px){
+  #ask-panel{
+    bottom:64px; right:8px; left:8px;
+    width:auto; max-width:none;
+    height:calc(100vh - 80px);
+  }
+  .term-window{height:min(70vh, 480px)}
+  .term-body{font-size:12px; padding:14px 18px}
+}
+
+/* Visual hints — subtle hover/cursor for ALL clickable surfaces */
+.skill-row, .an-cell, .interest-tabs .it, .nav-item, .bn-item,
+.cover-edit, .search-desktop, .mh-search, .open-status,
+.footer-links a, .sidecard-foot, .card-foot, .focus-item{
+  cursor:pointer;
+}
+.skill-row{transition:background .15s; border-radius:6px; margin:0 -8px; padding-left:8px; padding-right:8px}
+.skill-row:hover{background:rgba(0,0,0,.025)}
+.an-cell{transition:background .15s; border-radius:6px; padding:6px; margin:-6px}
+.an-cell:hover{background:rgba(0,0,0,.04)}
+.focus-item{transition:background .15s; border-radius:6px; margin:0 -8px; padding-left:8px; padding-right:8px}
+.focus-item:hover{background:rgba(0,0,0,.025)}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "Alexander Barzik",
+      "url": "https://alexanderbarzik.de/",
+      "description": "Persönliche Profilseite von Alexander Barzik — Immobilienkaufmann, Wirtschaftsinformatiker und Gründer von BARZIK STUDIO.",
+      "inLanguage": "de"
+    },
+    {
+      "@type": "Person",
+      "name": "Alexander Barzik",
+      "givenName": "Alexander",
+      "familyName": "Barzik",
+      "url": "https://alexanderbarzik.de/",
+      "email": "mail@alexanderbarzik.de",
+      "jobTitle": "Immobilienkaufmann",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "BGW Bielefeld",
+        "url": "https://www.bgw-bielefeld.de"
+      },
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "FHDW Bielefeld",
+        "url": "https://www.fhdw.de"
+      },
+      "knowsAbout": [
+        "Künstliche Intelligenz",
+        "Wohnungswirtschaft",
+        "Immobilienverwaltung",
+        "Wirtschaftsinformatik",
+        "Prozessautomatisierung",
+        "LLM & Prompt Engineering"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Melanchthonstraße 73",
+        "postalCode": "33615",
+        "addressLocality": "Bielefeld",
+        "addressRegion": "Nordrhein-Westfalen",
+        "addressCountry": "DE"
+      },
+      "knowsLanguage": ["de", "en"],
+      "sameAs": [
+        "https://studio.alexanderbarzik.de"
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "name": "BARZIK STUDIO",
+      "url": "https://studio.alexanderbarzik.de",
+      "description": "Digitales Studio aus Bielefeld — Webseiten, AI-Chatbots und Automationen für lokale Betriebe.",
+      "founder": {
+        "@type": "Person",
+        "name": "Alexander Barzik"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bielefeld",
+        "addressRegion": "Nordrhein-Westfalen",
+        "addressCountry": "DE"
+      }
+    }
+  ]
+}
+</script>
+<script>if(localStorage.getItem('lang')&&localStorage.getItem('lang')!=='de')document.documentElement.classList.add('i18n-loading')</script>
+</head>
+<body>
+
+<!-- ============ MOBILE STATUS + HEADER ============ -->
+<div class="mobile-status"></div>
+<header class="mobile-header">
+  <div class="mh-default" style="display:flex; align-items:center; flex:1; gap:4px">
+    <button class="mh-icon" aria-label="Profil"><div style="width:32px; height:32px; border-radius:50%; background:url('assets/alexander-barzik-square.jpg') center/cover"></div></button>
+    <div class="mh-search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <span data-i18n="mobile.search">Suchen</span>
+    </div>
+    <button class="mh-icon" aria-label="Messaging" data-i18n-aria="aria.messaging">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5a2 2 0 012-2h14a2 2 0 012 2v11a2 2 0 01-2 2h-8l-5 5v-5H5a2 2 0 01-2-2V5z"/></svg>
+    </button>
+    <button class="lang-toggle">EN</button>
+  </div>
+  <div class="mh-condensed">
+    <div class="av"></div>
+    <div class="nm">Alexander Barzik</div>
+    <button class="cn" data-action="connect">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg>
+      <span data-i18n="mobile.connect">Vernetzen</span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ DESKTOP TOP NAV ============ -->
+<header class="topbar">
+  <div class="brand" title="alexanderbarzik.de" aria-label="barzik">
+    <svg viewBox="0 0 64 64" width="26" height="26" aria-hidden="true"><g fill="#fff"><circle cx="12" cy="8" r="3"/><circle cx="12" cy="18" r="3"/><circle cx="12" cy="28" r="3"/><circle cx="12" cy="38" r="3"/><circle cx="12" cy="48" r="3"/><circle cx="12" cy="58" r="3"/><circle cx="22" cy="28" r="3"/><circle cx="32" cy="28" r="3"/><circle cx="42" cy="33" r="3"/><circle cx="42" cy="43" r="3"/><circle cx="42" cy="53" r="3"/><circle cx="32" cy="58" r="3"/><circle cx="22" cy="58" r="3"/></g></svg>
+  </div>
+  <div class="search-desktop">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+    <input placeholder="Suchen" id="desktop-search" data-i18n-placeholder="search.placeholder">
+    <div id="search-results"></div>
+  </div>
+  <nav class="nav-icons">
+    <a class="nav-item" href="#" data-action="home">
+      <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3 11l9-8 9 8v10a1 1 0 01-1 1h-5v-7H10v7H5a1 1 0 01-1-1V11z"/></svg></span>
+      <span class="lbl" data-i18n="nav.home">Start</span>
+    </a>
+    <a class="nav-item" href="#" data-action="network">
+      <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M9 11a4 4 0 100-8 4 4 0 000 8zm8 1a3 3 0 100-6 3 3 0 000 6zM3 21c0-3.3 2.7-6 6-6s6 2.7 6 6v1H3v-1zm14-3c2.2 0 4 1.8 4 4v1h-6v-1c0-1.5-.4-2.9-1.1-4 .3-.05 1-.05 3.1-.05z"/></svg></span>
+      <span class="lbl" data-i18n="nav.network">Netzwerk</span>
+      <span class="nav-badge">7</span>
+    </a>
+    <a class="nav-item" href="#" data-action="jobs">
+      <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6 5V4a2 2 0 012-2h8a2 2 0 012 2v1h3a1 1 0 011 1v13a2 2 0 01-2 2H4a2 2 0 01-2-2V6a1 1 0 011-1h3zm2 0h8V4H8v1z"/></svg></span>
+      <span class="lbl" data-i18n="nav.jobs">Jobs</span>
+    </a>
+    <a class="nav-item" href="#" data-action="messaging">
+      <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5a2 2 0 012-2h14a2 2 0 012 2v11a2 2 0 01-2 2h-8l-5 5v-5H5a2 2 0 01-2-2V5z"/></svg></span>
+      <span class="lbl" data-i18n="nav.messaging">Messaging</span>
+      <span class="nav-badge">3</span>
+    </a>
+    <a class="nav-item active" href="#" data-action="notifications">
+      <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22a2 2 0 002-2h-4a2 2 0 002 2zm7-6V11a7 7 0 00-6-6.9V3a1 1 0 10-2 0v1.1A7 7 0 005 11v5l-2 2v1h18v-1l-2-2z"/></svg></span>
+      <span class="lbl" data-i18n="nav.notifications">Benachrichtigungen</span>
+      <span class="nav-badge">12</span>
+    </a>
+    <div class="nav-divider"></div>
+    <div class="nav-me">
+      <div class="me-avatar" style="background-image:url('assets/alexander-barzik-square.jpg')"></div>
+      <div style="display:flex; align-items:center; gap:2px"><span data-i18n="nav.me">Ich</span> <span style="font-size:10px">▾</span></div>
+    </div>
+    <div class="nav-divider"></div>
+    <div class="nav-item nav-lang">
+      <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10A15.3 15.3 0 0112 2z"/></svg></span>
+      <button class="lang-toggle">EN</button>
+    </div>
+  </nav>
+</header>
+
+<!-- ============ PAGE GRID ============ -->
+<main class="page">
+
+  <!-- ====== MAIN COLUMN ====== -->
+  <section>
+
+    <!-- HERO -->
+    <div class="hero" id="hero">
+      <div class="hero-cover">
+        <button class="cover-edit" aria-label="Cover bearbeiten" data-i18n-aria="cover.edit">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.06 5.94l3.4-3.4a2 2 0 112.83 2.83l-3.4 3.4M14.06 5.94l-9.06 9.06V19h4l9.06-9.06M14.06 5.94L17.3 9.18"/></svg>
+        </button>
+      </div>
+      <div class="hero-body">
+        <div class="hero-avatar"></div>
+
+        <h1>
+          Alexander Barzik
+        </h1>
+
+        <div class="role" data-i18n="hero.role">
+          Immobilienkaufmann bei der BGW Bielefeld · Wirtschaftsinformatik-Student (FHDW)
+        </div>
+        <div class="role-sub">
+          <span class="role-open" data-i18n="hero.openTo">immer offen für Austausch</span>
+        </div>
+        <div class="meta">
+          <span data-i18n="hero.location">Bielefeld, Nordrhein-Westfalen</span>
+          <span class="dot">·</span>
+          <a href="mailto:mail@alexanderbarzik.de" data-i18n="hero.contactInfo">Kontaktinfo</a>
+        </div>
+        <div class="meta" style="margin-top:4px">
+          <a href="#" data-i18n="hero.connections">86 Kontakte</a>
+          <span class="dot">·</span>
+          <a href="#" data-i18n="hero.followers">124 Follower:innen</a>
+        </div>
+
+        <div class="hero-companies">
+          <a class="hc" href="https://www.bgw-bielefeld.de" target="_blank" rel="noopener">
+            <div class="hc-logo"><img src="https://www.google.com/s2/favicons?domain=bgw-bielefeld.de&sz=128" alt="BGW"></div>
+            BGW Bielefeld
+          </a>
+          <a class="hc" href="https://studio.alexanderbarzik.de" target="_blank" rel="noopener">
+            <div class="hc-logo is-circle"><img src="assets/barzik-studio-logo.png" alt="BARZIK STUDIO"></div>
+            BARZIK STUDIO
+          </a>
+          <a class="hc" href="https://www.fhdw.de" target="_blank" rel="noopener">
+            <div class="hc-logo"><img src="https://www.google.com/s2/favicons?domain=fhdw.de&sz=128" alt="FHDW"></div>
+            FHDW Bielefeld
+          </a>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary" data-action="connect">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg>
+            <span data-i18n="hero.connect">Vernetzen</span>
+          </button>
+          <button class="btn btn-outline-blue" data-action="message" data-i18n="hero.message">Nachricht</button>
+          <button class="btn btn-ghost" data-action="more"><span data-i18n="hero.more">Mehr</span></button>
+        </div>
+      </div>
+
+      <!-- Inline mini-analytics row (LinkedIn-style decoration) -->
+      <div class="analytics">
+        <div class="an-cell">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg>
+          <div>
+            <div class="lbl" data-i18n="analytics.views">23 Profilbesucher</div>
+            <div class="sub" data-i18n="analytics.viewsSub">in den letzten 90 Tagen</div>
+          </div>
+        </div>
+        <div class="an-cell">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          <div>
+            <div class="lbl" data-i18n="analytics.searches">4 Suchanfragen</div>
+            <div class="sub" data-i18n="analytics.searchesSub">in den letzten 7 Tagen</div>
+          </div>
+        </div>
+        <div class="an-cell">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 4-6"/></svg>
+          <div>
+            <div class="lbl" data-i18n="analytics.posts">3 Beitragsaufrufe</div>
+            <div class="sub" data-i18n="analytics.postsSub">letzte 7 Tage</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OPEN TO -->
+    <div class="card">
+      <div style="display:flex; gap:16px; align-items:flex-start; padding:20px 24px">
+        <div style="width:48px; height:48px; border-radius:50%; background:#E7F0FA; color:var(--blue); display:flex; align-items:center; justify-content:center; flex-shrink:0">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.4 8.4 0 01-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.4 8.4 0 013.8-.9h.5a8.5 8.5 0 018 8v.5z"/></svg>
+        </div>
+        <div style="flex:1; min-width:0">
+          <div style="font-size:16px; font-weight:600; margin-bottom:4px" data-i18n="openTo.title">Offen für Austausch & Netzwerk</div>
+          <div style="font-size:14px; color:var(--ink-2); line-height:1.5" data-i18n="openTo.topics">
+            KI in der Wohnungswirtschaft · PropTech · Wirtschaftsinformatik-Projekte
+          </div>
+          <div style="margin-top:8px"><a href="mailto:mail@alexanderbarzik.de" data-i18n="openTo.cta">Schreib mir gerne ›</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INFO / ABOUT -->
+    <div class="card">
+      <div class="card-head">
+        <h2 data-i18n="info.title">Info</h2>
+      </div>
+      <div class="card-body">
+        <div class="about-text">
+          <p data-i18n-html="info.p1">Immobilienkaufmann bei der <a href="https://www.bgw-bielefeld.de" target="_blank" rel="noopener">BGW Bielefeld</a> und berufsbegleitender Wirtschaftsinformatik-Student an der <a href="https://www.fhdw.de" target="_blank" rel="noopener">FHDW</a>. Nebenbei betreibe ich BARZIK STUDIO &mdash; ein kleines digitales Studio für Webseiten und Automationen.</p>
+          <p data-i18n-html="info.p2">Mein Hauptjob ist die Betriebs- und Heizkostenabrechnung. Daneben beschäftige ich mich damit, wo KI in der Wohnungswirtschaft sinnvoll eingesetzt werden kann.</p>
+          <p data-i18n-html="info.p3">Bachelor-Thesis: Konzeption eines digitalen Informations- und Koordinationssystems für quartiersorientiertes Wohnen am Beispiel des <a href="https://www.bgw-bielefeld.de/wohnen/bielefelder-modell/" target="_blank" rel="noopener" style="color:inherit;font-weight:inherit">Bielefelder Modells</a>.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <div class="card">
+      <div class="card-head">
+        <h2 data-i18n="exp.title">Berufserfahrung</h2>
+      </div>
+      <div class="card-body">
+        <ul class="timeline">
+          <li>
+            <div class="tl-logo"><img src="https://www.google.com/s2/favicons?domain=bgw-bielefeld.de&sz=128" alt="BGW"></div>
+            <div class="tl-content">
+              <h3 class="tl-title">BGW Bielefeld</h3>
+              <div class="tl-meta"><span data-i18n="exp.fulltime">Vollzeit</span><span data-duration-since="2017-08-01" data-i18n="exp.bgwPeriod">Aug. 2017 &ndash; heute</span></div>
+              <div class="tl-loc" data-i18n="exp.bgwLocation">Bielefeld, Nordrhein-Westfalen · Vor Ort</div>
+              <ul class="sub-roles">
+                <li>
+                  <h4 class="sub-role-title" data-i18n="exp.roleTitle">Immobilienkaufmann</h4>
+                  <div class="sub-role-meta" data-duration-since="2020-08-01" data-i18n="exp.rolePeriod">Aug. 2020 &ndash; heute</div>
+                  <div class="tl-desc" data-i18n="exp.roleDesc">Betriebs- und Heizkostenabrechnung für den BGW-Bestand. Daneben beschäftige ich mich mit KI-Potenzialen in der Wohnungswirtschaft.</div>
+                  <div class="tl-skills">
+                    <span class="ic-sk"><svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.5 7.5H22l-6 4.5 2.5 7.5L12 17l-6.5 4.5L8 14l-6-4.5h7.5z"/></svg></span>
+                    <span data-i18n="exp.roleSkills">Betriebskostenabrechnung, Heizkostenabrechnung, Künstliche Intelligenz &amp; Wohnungswirtschaft</span>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="sub-role-title" data-i18n="exp.traineeTitle">Auszubildender Immobilienkaufmann</h4>
+                  <div class="sub-role-meta" data-i18n="exp.traineePeriod">Aug. 2017 &ndash; Juli 2020 &middot; 3&nbsp;J.</div>
+                  <div class="tl-desc" data-i18n="exp.traineeDesc">Klassische Ausbildung mit Stationen in allen Abteilungen: Vermietung, Buchhaltung, technisches Bestands&shy;management und Mietercenter.</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="card">
+      <div class="card-head">
+        <h2 data-i18n="edu.title">Ausbildung</h2>
+      </div>
+      <div class="card-body">
+        <ul class="timeline">
+          <li>
+            <div class="tl-logo"><img src="https://www.google.com/s2/favicons?domain=fhdw.de&sz=128" alt="FHDW"></div>
+            <div class="tl-content">
+              <h3 class="tl-title" data-i18n="edu.mscTitle">Master of Science · Wirtschaftsinformatik</h3>
+              <div class="tl-org" data-i18n="edu.mscOrg">FHDW Bielefeld · Spezialisierung Angewandte Künstliche Intelligenz · berufsbegleitend</div>
+              <div class="tl-meta"><span data-i18n="edu.mscMeta1">Okt. 2026 – Sep. 2029 (geplant)</span><span data-i18n="edu.mscMeta2">120 ECTS</span></div>
+            </div>
+          </li>
+          <li>
+            <div class="tl-logo"><img src="https://www.google.com/s2/favicons?domain=fhdw.de&sz=128" alt="FHDW"></div>
+            <div class="tl-content">
+              <h3 class="tl-title" data-i18n="edu.bscTitle">Bachelor of Science · Wirtschaftsinformatik</h3>
+              <div class="tl-org" data-i18n="edu.bscOrg">FHDW Bielefeld · Spezialisierung Business Process Management · berufsbegleitend</div>
+              <div class="tl-meta"><span data-i18n="edu.bscMeta1">Okt. 2023 – Sep. 2026</span><span data-i18n="edu.bscMeta2">180 ECTS</span></div>
+              <div class="tl-desc" data-i18n="edu.bscDesc">Schnittstelle BWL &amp; IT. Module u.a.: Grundlagen der Informatik, Software Engineering &amp; Continuous Integration, Geschäftsprozessmanagement, Operations Management, Web Technologies and Applications, Marketing.</div>
+              <div class="tl-desc" style="margin-top:6px" data-i18n-html="edu.bscThesis"><strong>Bachelor-Thesis:</strong> Konzeption eines digitalen Informations- und Koordinationssystems für quartiersorientiertes Wohnen am Beispiel des <a href="https://www.bgw-bielefeld.de/wohnen/bielefelder-modell/" target="_blank" rel="noopener" style="color:inherit;font-weight:inherit">Bielefelder Modells</a>.</div>
+            </div>
+          </li>
+          <li>
+            <div class="tl-logo"><img src="https://www.google.com/s2/favicons?domain=mpg-bielefeld.de&sz=128" alt="Max-Planck-Gymnasium"></div>
+            <div class="tl-content">
+              <h3 class="tl-title" data-i18n="edu.abiturTitle">Allgemeine Hochschulreife (Abitur)</h3>
+              <div class="tl-org" data-i18n="edu.abiturOrg">Max-Planck-Gymnasium · Bielefeld</div>
+              <div class="tl-meta"><span data-i18n="edu.abiturMeta">Abschluss 2017</span></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="card">
+      <div class="card-head">
+        <h2 data-i18n="skills.title">Kenntnisse</h2>
+      </div>
+      <div class="card-body">
+        <div class="skill-row">
+          <div class="skill-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L8 8H3l4 5-2 7 7-4 7 4-2-7 4-5h-5z"/></svg></div>
+          <div style="flex:1; min-width:0">
+            <h3 class="skill-name" data-i18n="skills.ai">Künstliche Intelligenz</h3>
+            <div class="skill-meta">BGW Bielefeld &middot; FHDW &middot; BARZIK STUDIO</div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 9v0M9 13v0M9 17v0M15 9v0M15 13v0M15 17v0"/></svg></div>
+          <div style="flex:1; min-width:0">
+            <h3 class="skill-name" data-i18n="skills.property">Immobilienverwaltung</h3>
+            <div class="skill-meta">BGW Bielefeld</div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></svg></div>
+          <div style="flex:1; min-width:0">
+            <h3 class="skill-name" data-i18n="skills.housing">Wohnungswirtschaft</h3>
+            <div class="skill-meta">BGW Bielefeld &middot; FHDW</div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 10v6M4.2 4.2l4.2 4.2m7.2 7.2l4.2 4.2M1 12h6m10 0h6M4.2 19.8l4.2-4.2m7.2-7.2l4.2-4.2"/></svg></div>
+          <div style="flex:1; min-width:0">
+            <h3 class="skill-name" data-i18n="skills.automation">Prozessautomatisierung</h3>
+            <div class="skill-meta">BARZIK STUDIO</div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></div>
+          <div style="flex:1; min-width:0">
+            <h3 class="skill-name" data-i18n="skills.llm">LLM &amp; Prompt Engineering</h3>
+            <div class="skill-meta">BARZIK STUDIO</div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0018 0V5"/><path d="M3 12a9 3 0 0018 0"/></svg></div>
+          <div style="flex:1; min-width:0">
+            <h3 class="skill-name" data-i18n="skills.sql">SQL · Datenanalyse</h3>
+            <div class="skill-meta">BGW Bielefeld &middot; FHDW</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-foot">
+        <span data-i18n="skills.showAll">Alle 18 Kenntnisse anzeigen</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+      </div>
+    </div>
+
+    <!-- LANGUAGES -->
+    <div class="card">
+      <div class="card-head">
+        <h2 data-i18n="lang.title">Sprachen</h2>
+      </div>
+      <div class="card-body">
+        <div class="lang-item">
+          <h3 class="lang-name" data-i18n="lang.german">Deutsch</h3>
+          <div class="lang-level" data-i18n="lang.germanLevel">Muttersprache oder zweisprachig</div>
+        </div>
+        <div class="lang-item">
+          <h3 class="lang-name" data-i18n="lang.english">Englisch</h3>
+          <div class="lang-level" data-i18n="lang.englishLevel">Verhandlungssicher</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INTERESTS -->
+    <div class="card">
+      <div class="card-head">
+        <h2 data-i18n="interests.title">Interessen</h2>
+      </div>
+      <div class="interest-tabs">
+        <div class="it active" data-tab="0" data-i18n="interests.topVoices">Top-Stimmen</div>
+        <div class="it" data-tab="1" data-i18n="interests.companies">Unternehmen</div>
+        <div class="it" data-tab="2" data-i18n="interests.universities">Hochschulen</div>
+      </div>
+      <!-- Tab 0: Top-Stimmen -->
+      <div class="companies-grid" data-panel="0">
+        <div class="company-item">
+          <div class="ci-logo"><img src="https://www.google.com/s2/favicons?domain=gdw.de&sz=128" alt="GdW"></div>
+          <div>
+            <h4 class="ci-name">GdW Bundesverband Wohnungs- und Immobilien&shy;unternehmen</h4>
+            <div class="ci-followers" data-i18n="interests.gdwFollowers">2,1&nbsp;Tsd. Follower:innen</div>
+            <button class="ci-follow" data-action="follow" data-state="follow"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg> Folgen</button>
+          </div>
+        </div>
+        <div class="company-item">
+          <div class="ci-logo"><img src="https://www.google.com/s2/favicons?domain=gpti.de&sz=128" alt="PropTech"></div>
+          <div>
+            <h4 class="ci-name">PropTech Deutschland</h4>
+            <div class="ci-followers" data-i18n="interests.propTechFollowers">14&nbsp;Tsd. Follower:innen</div>
+            <button class="ci-follow" data-action="follow" data-state="following"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14"/></svg> Folge ich</button>
+          </div>
+        </div>
+        <div class="company-item">
+          <div class="ci-logo"><img src="https://www.google.com/s2/favicons?domain=ki-verband.de&sz=128" alt="AI Builders"></div>
+          <div>
+            <h4 class="ci-name">AI Builders DACH</h4>
+            <div class="ci-followers" data-i18n="interests.aiFollowers">38&nbsp;Tsd. Follower:innen</div>
+            <button class="ci-follow" data-action="follow" data-state="follow"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg> Folgen</button>
+          </div>
+        </div>
+        <div class="company-item">
+          <div class="ci-logo"><img src="https://www.google.com/s2/favicons?domain=ivd.net&sz=128" alt="IVD"></div>
+          <div>
+            <h4 class="ci-name">IVD &mdash; Immobilienverband Deutschland</h4>
+            <div class="ci-followers" data-i18n="interests.ivdFollowers">8&nbsp;Tsd. Follower:innen</div>
+            <button class="ci-follow" data-action="follow" data-state="follow"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg> Folgen</button>
+          </div>
+        </div>
+      </div>
+      <!-- Tab 1: Unternehmen -->
+      <div class="companies-grid" data-panel="1" style="display:none">
+        <div class="company-item">
+          <div class="ci-logo"><img src="https://www.google.com/s2/favicons?domain=bgw-bielefeld.de&sz=128" alt="BGW"></div>
+          <div>
+            <h4 class="ci-name">BGW Bielefeld</h4>
+            <div class="ci-followers" data-i18n="interests.bgwDesc">Wohnen &amp; Immobilien&shy;dienstleistungen</div>
+            <button class="ci-follow" data-action="follow" data-state="following"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14"/></svg> Folge ich</button>
+          </div>
+        </div>
+        <div class="company-item">
+          <div class="ci-logo"><img src="https://www.google.com/s2/favicons?domain=aareon.com&sz=128" alt="Aareon"></div>
+          <div>
+            <h4 class="ci-name">Aareon</h4>
+            <div class="ci-followers" data-i18n="interests.aareonDesc">ERP &amp; Immobilien-Software</div>
+            <button class="ci-follow" data-action="follow" data-state="follow"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg> Folgen</button>
+          </div>
+        </div>
+        <div class="company-item">
+          <div class="ci-logo"><img src="https://www.google.com/s2/favicons?domain=microsoft.com&sz=128" alt="Microsoft"></div>
+          <div>
+            <h4 class="ci-name">Microsoft</h4>
+            <div class="ci-followers" data-i18n="interests.msFollowers">18&nbsp;Mio. Follower:innen</div>
+            <button class="ci-follow" data-action="follow" data-state="follow"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg> Folgen</button>
+          </div>
+        </div>
+        <div class="company-item">
+          <div class="ci-logo"><img src="https://www.google.com/s2/favicons?domain=haufe.de&sz=128" alt="Haufe Group"></div>
+          <div>
+            <h4 class="ci-name">Haufe Group</h4>
+            <div class="ci-followers" data-i18n="interests.haufeDesc">Software &amp; Fachmedien</div>
+            <button class="ci-follow" data-action="follow" data-state="follow"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg> Folgen</button>
+          </div>
+        </div>
+      </div>
+      <!-- Tab 2: Hochschulen -->
+      <div class="companies-grid" data-panel="2" style="display:none">
+        <div class="company-item">
+          <div class="ci-logo"><img src="https://www.google.com/s2/favicons?domain=fhdw.de&sz=128" alt="FHDW"></div>
+          <div>
+            <h4 class="ci-name">FHDW Bielefeld</h4>
+            <div class="ci-followers" data-i18n="interests.fhdwDesc">Fachhochschule der Wirtschaft</div>
+            <button class="ci-follow" data-action="follow" data-state="following"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14"/></svg> Folge ich</button>
+          </div>
+        </div>
+        <div class="company-item">
+          <div class="ci-logo"><img src="https://www.google.com/s2/favicons?domain=uni-bielefeld.de&sz=128" alt="Uni Bielefeld"></div>
+          <div>
+            <h4 class="ci-name">Universität Bielefeld</h4>
+            <div class="ci-followers" data-i18n="interests.uniFollowers">21&nbsp;Tsd. Follower:innen</div>
+            <button class="ci-follow" data-action="follow" data-state="follow"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg> Folgen</button>
+          </div>
+        </div>
+        <div class="company-item">
+          <div class="ci-logo"><img src="https://www.google.com/s2/favicons?domain=hsbi.de&sz=128" alt="HSBI"></div>
+          <div>
+            <h4 class="ci-name">Hochschule Bielefeld (HSBI)</h4>
+            <div class="ci-followers" data-i18n="interests.hsbiFollowers">8&nbsp;Tsd. Follower:innen</div>
+            <button class="ci-follow" data-action="follow" data-state="follow"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg> Folgen</button>
+          </div>
+        </div>
+        <div class="company-item">
+          <div class="ci-logo"><img src="https://www.google.com/s2/favicons?domain=th-owl.de&sz=128" alt="TH OWL"></div>
+          <div>
+            <h4 class="ci-name">TH OWL</h4>
+            <div class="ci-followers" data-i18n="interests.thowlDesc">Technische Hochschule Ostwestfalen-Lippe</div>
+            <button class="ci-follow" data-action="follow" data-state="follow"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg> Folgen</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ====== RIGHT SIDEBAR ====== -->
+  <aside>
+
+    <!-- Profile URL / Public profile -->
+    <div class="sidecard">
+      <div class="sidecard-head">
+        <div>
+          <h3 data-i18n="sidebar.publicProfile">Öffentliches Profil</h3>
+          <div class="sub" style="word-break:break-all">www.alexanderbarzik.de</div>
+        </div>
+        <button class="icon-btn" aria-label="Teilen" data-i18n-aria="share.label">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13"/></svg>
+        </button>
+      </div>
+      <div class="sidecard-body" style="padding-top:0"></div>
+    </div>
+
+    <!-- Studio Card -->
+    <a class="studio-card" href="https://studio.alexanderbarzik.de" target="_blank" rel="noopener">
+      <div class="studio-head">
+        <div class="studio-logo">
+          <img src="assets/barzik-studio-logo.png" alt="BARZIK STUDIO">
+        </div>
+        <div class="studio-brand">
+          <div class="studio-name">BARZIK STUDIO</div>
+          <div class="studio-tag" data-i18n="sidebar.studioTag">Digitales Studio · Bielefeld</div>
+        </div>
+        <div class="studio-arrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+        </div>
+      </div>
+      <div class="studio-body" data-i18n="sidebar.studioDesc">
+        Webseiten, AI-Chatbots und Automationen für lokale Betriebe.
+      </div>
+      <div class="studio-tags">
+        <span data-i18n="sidebar.studioTagWeb">Webseiten</span><span data-i18n="sidebar.studioTagChat">Chatbots</span><span data-i18n="sidebar.studioTagAI">AI-Workflows</span>
+      </div>
+    </a>
+
+    <!-- Aktueller Fokus -->
+    <div class="sidecard">
+      <div class="sidecard-head">
+        <div>
+          <h3 data-i18n="sidebar.currentFocus">Aktueller Fokus</h3>
+          <div class="sub" data-i18n="sidebar.currentFocusSub">Womit ich mich gerade beschäftige</div>
+        </div>
+      </div>
+      <div class="sidecard-body">
+        <ul class="focus-list">
+          <li class="focus-item">
+            <div class="focus-icon" style="background:linear-gradient(135deg,#0A66C2,#004182)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2L8 8H3l4 5-2 7 7-4 7 4-2-7 4-5h-5z"/></svg>
+            </div>
+            <div class="focus-info">
+              <h4 class="focus-title"><span data-i18n="focus.aiTitle">KI in der Wohnungswirtschaft</span> <span class="focus-badge" data-i18n="focus.active">Aktiv</span></h4>
+              <div class="focus-desc" data-i18n="focus.aiDesc">Wo lohnt sich KI-Einsatz bei Abrechnungen, Mieter&shy;kommunikation und Bestands&shy;management?</div>
+            </div>
+          </li>
+          <li class="focus-item">
+            <div class="focus-icon" style="background:linear-gradient(135deg,#5C2D8C,#3A1B5B)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+            </div>
+            <div class="focus-info">
+              <h4 class="focus-title"><span data-i18n="focus.thesisTitle">Bachelor-Thesis</span> <span class="focus-badge" data-i18n="focus.active">Aktiv</span></h4>
+              <div class="focus-desc" data-i18n="focus.thesisDesc">Digitales Koordinations&shy;system für quartiers&shy;orientiertes Wohnen &mdash; Bielefelder Modell</div>
+            </div>
+          </li>
+          <li class="focus-item">
+            <div class="focus-icon" style="background:linear-gradient(135deg,#01754F,#003D29)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+            </div>
+            <div class="focus-info">
+              <h4 class="focus-title"><span data-i18n="focus.studioTitle">BARZIK STUDIO</span></h4>
+              <div class="focus-desc" data-i18n="focus.studioDesc">Webseiten und AI-Automationen für lokale Betriebe in Bielefeld</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Mini contact card -->
+    <div class="promo" style="text-align:left">
+      <div class="label" style="text-align:left" data-i18n="contact.label">Kontakt</div>
+      <div style="font-size:14px; line-height:1.7; margin-top:4px">
+        <a href="mailto:mail@alexanderbarzik.de" style="display:block">mail@alexanderbarzik.de</a>
+        <a href="https://studio.alexanderbarzik.de" target="_blank" rel="noopener" style="display:block">BARZIK STUDIO &rarr;</a>
+        <span style="color:var(--ink-3); display:block" data-i18n="contact.location">Bielefeld, Deutschland</span>
+      </div>
+    </div>
+
+    <!-- Footer links -->
+    <div class="footer-links">
+      <a href="#" data-i18n="footer.about">Über</a>
+      <a href="#" data-i18n="footer.accessibility">Barrierefreiheit</a>
+      <a href="#" data-i18n="footer.help">Hilfe</a>
+      <a href="datenschutz.html" data-i18n="footer.privacy">Datenschutz</a>
+      <a href="impressum.html" data-i18n="footer.imprint">Impressum</a>
+      <a href="#" data-i18n="footer.careers">Karriere</a>
+    </div>
+    <div class="footer-meta" data-i18n="footer.disclaimer">
+      © 2026 Alexander Barzik · Diese persönliche Webseite steht in keiner Verbindung zur LinkedIn Corporation. Layout und Farbwelt sind rein gestalterisch angelehnt.
+    </div>
+  </aside>
+</main>
+
+<!-- ============ MOBILE BOTTOM TAB BAR ============ -->
+<nav class="bottom-nav" aria-label="Hauptnavigation" data-i18n-aria="aria.mainNav">
+  <div class="bn-row">
+    <a class="bn-item" href="#" data-action="home">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3 11l9-8 9 8v10a1 1 0 01-1 1h-5v-7H10v7H5a1 1 0 01-1-1V11z"/></svg>
+      <span data-i18n="nav.home">Start</span>
+    </a>
+    <a class="bn-item" href="#" data-action="network">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M9 11a4 4 0 100-8 4 4 0 000 8zm8 1a3 3 0 100-6 3 3 0 000 6zM3 21c0-3.3 2.7-6 6-6s6 2.7 6 6v1H3v-1zm14-3c2.2 0 4 1.8 4 4v1h-6v-1c0-1.5-.4-2.9-1.1-4 .3-.05 1-.05 3.1-.05z"/></svg>
+      <span data-i18n="nav.network">Netzwerk</span>
+      <span class="bn-badge">7</span>
+    </a>
+    <a class="bn-item" href="#" data-action="post" aria-label="Beitrag erstellen" data-i18n-aria="aria.createPost">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M12 8v8M8 12h8" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <span data-i18n="mobile.post">Beitrag</span>
+    </a>
+    <a class="bn-item" href="#" data-action="notifications">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22a2 2 0 002-2h-4a2 2 0 002 2zm7-6V11a7 7 0 00-6-6.9V3a1 1 0 10-2 0v1.1A7 7 0 005 11v5l-2 2v1h18v-1l-2-2z"/></svg>
+      <span data-i18n="mobile.notifications">Mitteilungen</span>
+      <span class="bn-badge">12</span>
+    </a>
+    <a class="bn-item bn-me active" href="#" data-action="jobs">
+      <div class="av"></div>
+      <span data-i18n="nav.jobs">Jobs</span>
+    </a>
+  </div>
+</nav>
+
+<script>
+  // ============================================
+  // Mobile sticky header: show condensed (name + connect) once user scrolls past hero
+  // ============================================
+  (function(){
+    const body = document.body;
+    const hero = document.getElementById('hero');
+    if(!hero) return;
+    function onScroll(){
+      if(window.innerWidth > 720){
+        body.classList.remove('scrolled');
+        return;
+      }
+      const top = hero.getBoundingClientRect().top;
+      if(top < -110){
+        body.classList.add('scrolled');
+      } else {
+        body.classList.remove('scrolled');
+      }
+    }
+    window.addEventListener('scroll', onScroll, {passive:true});
+    window.addEventListener('resize', onScroll);
+    onScroll();
+  })();
+</script>
+<script src="translations.js?v=2"></script>
+<script src="i18n.js?v=2"></script>
+<script src="easter-eggs.js?v=21"></script>
+<script src="interactions.js?v=21"></script>
+
+</body>
+</html>
