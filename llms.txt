@@ -1,0 +1,50 @@
+# Alexander Barzik
+
+> Immobilienkaufmann bei der BGW Bielefeld, Wirtschaftsinformatik-Student (B.Sc.) an der FHDW Bielefeld und Gruender von BARZIK STUDIO — einem digitalen Studio aus Bielefeld.
+
+## Ueberblick
+
+Alexander Barzik ist Immobilienkaufmann bei der BGW Bielefeld (seit 2017), studiert berufsbegleitend Wirtschaftsinformatik an der FHDW Bielefeld (B.Sc., Abschluss 2026) und hat BARZIK STUDIO gegruendet. Sein Fokus liegt auf dem Einsatz von Kuenstlicher Intelligenz in der Wohnungswirtschaft.
+
+## Berufserfahrung
+
+### BGW Bielefeld — Immobilienkaufmann (seit Aug. 2020)
+- Betriebs- und Heizkostenabrechnung fuer den BGW-Bestand
+- Analyse von KI-Potenzialen und Entwicklung konkreter KI-Loesungen
+- Zuvor: Ausbildung zum Immobilienkaufmann (2017–2020)
+
+### BARZIK STUDIO — Gruender
+- Webseiten, AI-Chatbots und Automationen fuer lokale Betriebe
+- Website: https://studio.alexanderbarzik.de
+
+## Ausbildung
+
+### FHDW Bielefeld — B.Sc. Wirtschaftsinformatik (2023–2026)
+- Spezialisierung: Business Process Management, berufsbegleitend
+- Bachelor-Thesis: Konzeption eines digitalen Informations- und Koordinationssystems fuer quartiersorientiertes Wohnen am Beispiel des Bielefelder Modells
+
+### FHDW Bielefeld — M.Sc. Wirtschaftsinformatik (geplant Okt. 2026–Sep. 2029)
+- Spezialisierung: Angewandte Kuenstliche Intelligenz
+
+### Max-Planck-Gymnasium Bielefeld — Abitur (2017)
+
+## Kenntnisse
+
+- Kuenstliche Intelligenz
+- Immobilienverwaltung
+- Wohnungswirtschaft
+- Prozessautomatisierung
+- LLM & Prompt Engineering
+- SQL & Datenanalyse
+
+## Sprachen
+
+- Deutsch: Muttersprache
+- Englisch: Verhandlungssicher
+
+## Kontakt
+
+- E-Mail: mail@alexanderbarzik.de
+- Standort: Bielefeld, Nordrhein-Westfalen, Deutschland
+- Website: https://alexanderbarzik.de
+- Studio: https://studio.alexanderbarzik.de

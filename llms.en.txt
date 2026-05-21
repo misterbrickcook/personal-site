@@ -1,0 +1,50 @@
+# Alexander Barzik
+
+> Real estate professional at BGW Bielefeld, Business Informatics student (B.Sc.) at FHDW Bielefeld, and founder of BARZIK STUDIO — a digital studio based in Bielefeld.
+
+## Overview
+
+Alexander Barzik is a real estate professional at BGW Bielefeld (since 2017), studying Business Informatics part-time at FHDW Bielefeld (B.Sc., graduating 2026), and founded BARZIK STUDIO. His focus is on the application of Artificial Intelligence in the housing industry.
+
+## Experience
+
+### BGW Bielefeld — Real Estate Professional (since Aug 2020)
+- Operating and heating cost accounting for BGW properties
+- Analyzing AI potential and developing concrete AI solutions
+- Previously: Real estate trainee (2017–2020)
+
+### BARZIK STUDIO — Founder
+- Websites, AI chatbots, and automations for local businesses
+- Website: https://studio.alexanderbarzik.de
+
+## Education
+
+### FHDW Bielefeld — B.Sc. Business Informatics (2023–2026)
+- Specialization: Business Process Management, part-time
+- Bachelor thesis: Designing a digital information and coordination system for neighborhood-oriented living based on the Bielefeld Model
+
+### FHDW Bielefeld — M.Sc. Business Informatics (planned Oct 2026–Sep 2029)
+- Specialization: Applied Artificial Intelligence
+
+### Max-Planck-Gymnasium Bielefeld — Abitur (2017)
+
+## Skills
+
+- Artificial Intelligence
+- Property Management
+- Housing Industry
+- Process Automation
+- LLM & Prompt Engineering
+- SQL & Data Analysis
+
+## Languages
+
+- German: Native
+- English: Professional working proficiency
+
+## Contact
+
+- Email: mail@alexanderbarzik.de
+- Location: Bielefeld, North Rhine-Westphalia, Germany
+- Website: https://alexanderbarzik.de
+- Studio: https://studio.alexanderbarzik.de
